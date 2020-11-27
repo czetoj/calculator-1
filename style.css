@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 1px solid rgba(0,0,0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+    gap: .7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+}
+.display {
+    grid-column: 1 / span 4;
+    border: 1px solid rgba(0,0,0, 0.2);
+    box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+    color: rgba(0,0,0, 0.5);
+    height: 5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+.equal {
+    grid-row: 3 / span 4;
+    grid-column-start: 4;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 102, 252);
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+    color: #fff;
+    cursor: pointer;
+}
+.equal:hover {
+    background-color: rgb(15, 15, 221);
+}
+.cell {
+    border: 1px solid rgba(0,0,0, 0.2);
+    font-size: 2rem;
+    height: 4rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.03);
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+    cursor: pointer;
+    color: rgba(0,0,0, 0.5);
+}
+.cell:hover {
+    background-color: rgba(0,0,0, 0.2);
+}
+.firstLine {
+    background-color: rgba(0,0,0, 0.15);
+}
+.firstLine:hover {
+    background-color: rgba(0,0,0, 0.5);
+    color: #fff;
+}
